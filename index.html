@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bruno Marafiga | Data Analyst & Governança de Dados</title>
+  <meta name="description" content="Portfólio de Bruno Marafiga: Projetos em Análise de Dados, IA & NLP, Governança da Informação & LGPD e Automação Acadêmica na UFPR.">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
+  
+  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            brand: {
+              50: '#eff6ff',
+              100: '#dbeafe',
+              500: '#3b82f6',
+              600: '#2563eb',
+              700: '#1d4ed8',
+              800: '#1e40af',
+              900: '#1e3a8a',
+            },
+            accent: {
+              cyan: '#06b6d4',
+              teal: '#14b8a6',
+              purple: '#8b5cf6',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col antialiased selection:bg-blue-600 selection:text-white transition-colors duration-300">
+
+  <!-- Background Ambient Glow -->
+  <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+    <div class="absolute -top-40 -left-40 w-96 h-96 bg-blue-600/15 rounded-full blur-3xl"></div>
+    <div class="absolute top-1/3 -right-40 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl"></div>
+    <div class="absolute -bottom-40 left-1/3 w-96 h-96 bg-purple-600/10 rounded-full blur-3xl"></div>
+  </div>
+
+  <!-- Navbar -->
+  <header class="sticky top-0 z-40 backdrop-blur-md bg-slate-950/80 border-b border-slate-800/80 transition-colors">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="#hero" class="flex items-center gap-2.5 font-bold text-lg tracking-tight hover:opacity-90 transition">
+        <span class="w-8 h-8 rounded-lg bg-gradient-to-tr from-blue-600 to-cyan-500 flex items-center justify-center text-white text-sm font-mono shadow-md shadow-blue-500/20">BM</span>
+        <span class="text-white">Bruno <span class="text-blue-400">Marafiga</span></span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-slate-300">
+        <a href="#sobre" class="hover:text-blue-400 transition">Sobre</a>
+        <a href="#pilares" class="hover:text-blue-400 transition">Pilares</a>
+        <a href="#projetos" class="hover:text-blue-400 transition">Projetos</a>
+        <a href="#habilidades" class="hover:text-blue-400 transition">Competências</a>
+        <a href="#trajetoria" class="hover:text-blue-400 transition">Trajetória</a>
+        <a href="#contato" class="hover:text-blue-400 transition">Contato</a>
+      </nav>
+
+      <!-- Action & Links -->
+      <div class="flex items-center gap-3">
+        <a href="https://github.com/brunomarafiga" target="_blank" rel="noopener noreferrer" class="p-2 text-slate-400 hover:text-white transition" aria-label="GitHub">
+          <i data-lucide="github" class="w-5 h-5"></i>
+        </a>
+        <a href="https://linkedin.com/in/brunomarafiga" target="_blank" rel="noopener noreferrer" class="p-2 text-slate-400 hover:text-white transition" aria-label="LinkedIn">
+          <i data-lucide="linkedin" class="w-5 h-5"></i>
+        </a>
+        <a href="#contato" class="hidden sm:inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-blue-600 hover:bg-blue-500 text-white transition shadow-sm shadow-blue-600/30">
+          <span>Conversar</span>
+          <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="flex-grow z-10">
+    
+    <!-- Hero Section -->
+    <section id="hero" class="relative pt-20 pb-16 sm:pt-28 sm:pb-24 overflow-hidden">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Status Pill -->
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900 border border-slate-800 text-xs font-mono text-blue-400 mb-6 shadow-inner">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span>Pesquisador OBIA/UFPR • Data Analyst & Governança</span>
+        </div>
+
+        <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white mb-6 leading-tight">
+          Transformando dados em <br class="hidden sm:block">
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-indigo-400">
+            inteligência estratégica e ação.
+          </span>
+        </h1>
+
+        <p class="max-w-3xl text-lg sm:text-xl text-slate-400 mb-10 leading-relaxed">
+          Graduando em <strong>Gestão da Informação</strong> na <strong>UFPR</strong>. Atuo na união entre 
+          análise computacional de dados, inteligência artificial generativa/NLP, automação de processos universitários e 
+          governança documental com foco em <strong>LGPD</strong>.
+        </p>
+
+        <div class="flex flex-wrap items-center gap-4">
+          <a href="#projetos" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold text-sm transition shadow-lg shadow-blue-600/25">
+            <i data-lucide="folder-git-2" class="w-4 h-4"></i>
+            <span>Ver Projetos em Destaque</span>
+          </a>
+          <a href="https://github.com/brunomarafiga" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-800 font-semibold text-sm transition">
+            <i data-lucide="github" class="w-4 h-4"></i>
+            <span>github.com/brunomarafiga</span>
+          </a>
+          <a href="mailto:brunomarafiga@proton.me" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-800 font-semibold text-sm transition">
+            <i data-lucide="mail" class="w-4 h-4"></i>
+            <span>brunomarafiga@proton.me</span>
+          </a>
+        </div>
+
+        <!-- Quick Metrics Grid -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-16 pt-10 border-t border-slate-800/80">
+          <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800/80">
+            <div class="text-2xl sm:text-3xl font-extrabold text-blue-400 font-mono">11+</div>
+            <div class="text-xs text-slate-400 mt-1">Repositórios Open-Source</div>
+          </div>
+          <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800/80">
+            <div class="text-2xl sm:text-3xl font-extrabold text-cyan-400 font-mono">OBIA</div>
+            <div class="text-xs text-slate-400 mt-1">Pesquisador IA / PIBIC UFPR</div>
+          </div>
+          <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800/80">
+            <div class="text-2xl sm:text-3xl font-extrabold text-indigo-400 font-mono">CIAI</div>
+            <div class="text-xs text-slate-400 mt-1">Avaliação Institucional MEC</div>
+          </div>
+          <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800/80">
+            <div class="text-2xl sm:text-3xl font-extrabold text-emerald-400 font-mono">100%</div>
+            <div class="text-xs text-slate-400 mt-1">Client-Side & LGPD Compliant</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Pilares Section -->
+    <section id="pilares" class="py-16 bg-slate-900/40 border-y border-slate-800/60">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-2xl mx-auto mb-12">
+          <h2 class="text-xs font-mono text-blue-400 uppercase tracking-widest mb-2">Especialidades</h2>
+          <p class="text-3xl font-bold text-white tracking-tight">Os 4 Pilares de Atuação</p>
+          <p class="text-slate-400 text-sm mt-3">Combinando rigor computacional, métodos científicos e conformidade regulatória.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          
+          <!-- Card 1 -->
+          <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800 hover:border-blue-500/50 transition group">
+            <div class="w-12 h-12 rounded-xl bg-blue-600/10 text-blue-400 flex items-center justify-center mb-5 group-hover:scale-110 transition">
+              <i data-lucide="bar-chart-3" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">Análise de Dados & BI</h3>
+            <p class="text-sm text-slate-400 leading-relaxed mb-4">
+              Extração, tratamento e modelagem preditiva (Educational Data Mining). Criação de dashboards executivos no Power BI, consultas analíticas em SQL e otimização por meta-heurísticas bioinspiradas.
+            </p>
+            <div class="flex flex-wrap gap-1.5 text-xs font-mono text-slate-300">
+              <span class="px-2.5 py-1 rounded bg-slate-800 border border-slate-700">Python</span>
+              <span class="px-2.5 py-1 rounded bg-slate-800 border border-slate-700">SQL</span>
+              <span class="px-2.5 py-1 rounded bg-slate-800 border border-slate-700">Power BI</span>
+              <span class="px-2.5 py-1 rounded bg-slate-800 border border-slate-700">Scikit-Learn</span>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800 hover:border-cyan-500/50 transition group">
+            <div class="w-12 h-12 rounded-xl bg-cyan-600/10 text-cyan-400 flex items-center justify-center mb-5 group-hover:scale-110 transition">
+              <i data-lucide="brain-circuit" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">IA Generativa, NLP & Scraping</h3>
+            <p class="text-sm text-slate-400 leading-relaxed mb-4">
+              Pesquisa no OBIA/UFPR focada na geração e curadoria de corpora textuais para modelos de embeddings. Aplicações multimodais com a API Google Gemini e análise de conteúdo segundo Laurence Bardin.
+            </p>
+            <div class="flex flex-wrap gap-1.5 text-xs font-mono text-slate-300">
+              <span class="px-2.5 py-1 rounded bg-slate-800 border border-slate-700">Google Gemini API</span>
+              <span class="px-2.5 py-1 rounded bg-slate-800 border border-slate-700">NLP</span>
+              <span class="px-2.5 py-1 rounded bg-slate-800 border border-slate-700">Web Scraping</span>
+              <span class="px-2.5 py-1 rounded bg-slate-800 border border-slate-700">Bardin</span>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800 hover:border-purple-500/50 transition group">
+            <div class="w-12 h-12 rounded-xl bg-purple-600/10 text-purple-400 flex items-center justify-center mb-5 group-hover:scale-110 transition">
+              <i data-lucide="shield-check" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">Governança de Dados & LGPD</h3>
+            <p class="text-sm text-slate-400 leading-relaxed mb-4">
+              Arquitetura da informação, auditoria documental e conformidade com a Lei Geral de Proteção de Dados (LGPD). Alinhamento a exigências regulatórias do MEC/SINAES para Pró-reitorias e Superintendências.
+            </p>
+            <div class="flex flex-wrap gap-1.5 text-xs font-mono text-slate-300">
+              <span class="px-2.5 py-1 rounded bg-slate-800 border border-slate-700">LGPD</span>
+              <span class="px-2.5 py-1 rounded bg-slate-800 border border-slate-700">MEC / SINAES</span>
+              <span class="px-2.5 py-1 rounded bg-slate-800 border border-slate-700">Auditoria</span>
+              <span class="px-2.5 py-1 rounded bg-slate-800 border border-slate-700">Taxonomias</span>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800 hover:border-emerald-500/50 transition group">
+            <div class="w-12 h-12 rounded-xl bg-emerald-600/10 text-emerald-400 flex items-center justify-center mb-5 group-hover:scale-110 transition">
+              <i data-lucide="terminal" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">Automação Web & Client-Side</h3>
+            <p class="text-sm text-slate-400 leading-relaxed mb-4">
+              Criação de utilitários rápidos com PyScript (Python rodando em WebAssembly no navegador) e Vanilla JS/Vue, viabilizando soluções serverless sem custo de infraestrutura e com privacidade integral.
+            </p>
+            <div class="flex flex-wrap gap-1.5 text-xs font-mono text-slate-300">
+              <span class="px-2.5 py-1 rounded bg-slate-800 border border-slate-700">PyScript</span>
+              <span class="px-2.5 py-1 rounded bg-slate-800 border border-slate-700">Vue 3 / Nuxt</span>
+              <span class="px-2.5 py-1 rounded bg-slate-800 border border-slate-700">JavaScript</span>
+              <span class="px-2.5 py-1 rounded bg-slate-800 border border-slate-700">Canvas</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Projetos Section -->
+    <section id="projetos" class="py-20">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-6">
+          <div>
+            <h2 class="text-xs font-mono text-blue-400 uppercase tracking-widest mb-2">Portfólio de Repositórios</h2>
+            <p class="text-3xl font-bold text-white tracking-tight">Projetos & Ferramentas</p>
+            <p class="text-slate-400 text-sm mt-2">Explore os projetos desenvolvidos para pesquisa, gestão universitária e desenvolvimento web.</p>
+          </div>
+
+          <!-- Live Search Bar -->
+          <div class="relative w-full md:w-72">
+            <input type="text" id="projectSearch" placeholder="Buscar por tecnologia, nome..." 
+              class="w-full pl-9 pr-4 py-2 rounded-xl bg-slate-900 border border-slate-800 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 transition">
+            <i data-lucide="search" class="w-4 h-4 text-slate-500 absolute left-3 top-2.5"></i>
+          </div>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="flex flex-wrap items-center gap-2 mb-8 pb-3 border-b border-slate-800/80">
+          <button data-filter="all" class="filter-btn active px-4 py-1.5 rounded-lg text-xs font-semibold bg-blue-600 text-white transition">Todos (11)</button>
+          <button data-filter="data-ai" class="filter-btn px-4 py-1.5 rounded-lg text-xs font-medium bg-slate-900 hover:bg-slate-800 text-slate-400 hover:text-white border border-slate-800 transition">Ciência de Dados & IA</button>
+          <button data-filter="automacao" class="filter-btn px-4 py-1.5 rounded-lg text-xs font-medium bg-slate-900 hover:bg-slate-800 text-slate-400 hover:text-white border border-slate-800 transition">Automação & Python</button>
+          <button data-filter="governanca" class="filter-btn px-4 py-1.5 rounded-lg text-xs font-medium bg-slate-900 hover:bg-slate-800 text-slate-400 hover:text-white border border-slate-800 transition">Governança & LGPD</button>
+          <button data-filter="web-ui" class="filter-btn px-4 py-1.5 rounded-lg text-xs font-medium bg-slate-900 hover:bg-slate-800 text-slate-400 hover:text-white border border-slate-800 transition">Web & UI/UX</button>
+        </div>
+
+        <!-- Project Grid Container -->
+        <div id="projectGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Rendered dynamically by script.js -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Trajetória & Experiência -->
+    <section id="trajetoria" class="py-16 bg-slate-900/30 border-t border-slate-800/60">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center mb-12">
+          <h2 class="text-xs font-mono text-blue-400 uppercase tracking-widest mb-2">Carreira & Formação</h2>
+          <p class="text-3xl font-bold text-white tracking-tight">Trajetória Acadêmica & Institucional</p>
+        </div>
+
+        <div class="space-y-8 relative before:absolute before:inset-0 before:left-5 before:w-0.5 before:bg-slate-800">
+          
+          <!-- Item 1 -->
+          <div class="relative flex items-start gap-6 pl-12 group">
+            <span class="absolute left-3.5 -translate-x-1/2 w-4 h-4 rounded-full bg-blue-500 border-4 border-slate-950"></span>
+            <div class="p-5 rounded-2xl bg-slate-900 border border-slate-800 w-full hover:border-slate-700 transition">
+              <span class="text-xs font-mono text-blue-400 font-semibold">2021 — Presente</span>
+              <h3 class="text-base font-bold text-white mt-1">Bacharelado em Gestão da Informação</h3>
+              <p class="text-xs text-slate-400 font-medium mb-2">Universidade Federal do Paraná (UFPR)</p>
+              <p class="text-sm text-slate-400">
+                Formação com ênfase em arquitetura da informação, mineração de dados, governança corporativa, inteligência de negócios, gestão do conhecimento e LGPD.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="relative flex items-start gap-6 pl-12 group">
+            <span class="absolute left-3.5 -translate-x-1/2 w-4 h-4 rounded-full bg-cyan-400 border-4 border-slate-950"></span>
+            <div class="p-5 rounded-2xl bg-slate-900 border border-slate-800 w-full hover:border-slate-700 transition">
+              <span class="text-xs font-mono text-cyan-400 font-semibold">Iniciação Científica (PIBIC)</span>
+              <h3 class="text-base font-bold text-white mt-1">Pesquisador em Inteligência Artificial</h3>
+              <p class="text-xs text-slate-400 font-medium mb-2">OBIA — Observatório Brasileiro de Inteligência Artificial / UFPR</p>
+              <p class="text-sm text-slate-400">
+                Desenvolvimento de pipelines computacionais de web scraping e processamento de linguagem natural (NLP) para criação de corpora textuais especializados voltados ao benchmarking de modelos de embeddings.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="relative flex items-start gap-6 pl-12 group">
+            <span class="absolute left-3.5 -translate-x-1/2 w-4 h-4 rounded-full bg-indigo-400 border-4 border-slate-950"></span>
+            <div class="p-5 rounded-2xl bg-slate-900 border border-slate-800 w-full hover:border-slate-700 transition">
+              <span class="text-xs font-mono text-indigo-400 font-semibold">Atuação Institucional UFPR</span>
+              <h3 class="text-base font-bold text-white mt-1">Desenvolvimento de Automações & Avaliação Institucional</h3>
+              <p class="text-xs text-slate-400 font-medium mb-2">CIAI / PROPLAN & PROGRAD / UFPR</p>
+              <p class="text-sm text-slate-400">
+                Engenharia de pipelines para mineração de relatórios e-MEC (análise de Bardin), algoritmo de ensalamento para o SIEPE e gerador automatizado de certificados acadêmicos.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Contato Section -->
+    <section id="contato" class="py-20">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        
+        <div class="p-8 sm:p-12 rounded-3xl bg-gradient-to-b from-slate-900 to-slate-950 border border-slate-800 shadow-2xl">
+          <h2 class="text-xs font-mono text-blue-400 uppercase tracking-widest mb-2">Conecte-se</h2>
+          <p class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-4">Vamos criar algo impactante juntos?</p>
+          <p class="max-w-xl mx-auto text-slate-400 text-sm leading-relaxed mb-8">
+            Estou disponível para colaborações em projetos de Ciência de Dados, Governança da Informação & LGPD, 
+            pesquisas em IA e oportunidades profissionais.
+          </p>
+
+          <div class="flex flex-wrap items-center justify-center gap-4">
+            <a href="mailto:brunomarafiga@proton.me" class="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold text-sm transition shadow-lg shadow-blue-600/30">
+              <i data-lucide="mail" class="w-4 h-4"></i>
+              <span>Enviar E-mail (brunomarafiga@proton.me)</span>
+            </a>
+            <a href="https://linkedin.com/in/brunomarafiga" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-white border border-slate-700 font-semibold text-sm transition">
+              <i data-lucide="linkedin" class="w-4 h-4"></i>
+              <span>Perfil no LinkedIn</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-800/80 bg-slate-950 py-8 text-center text-xs text-slate-500">
+    <div class="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-2">
+        <span class="font-mono text-slate-400">© 2026 Bruno Marafiga</span>
+        <span>•</span>
+        <span>Curitiba, PR, Brasil</span>
+      </div>
+      <div class="flex items-center gap-4 text-slate-400">
+        <a href="https://github.com/brunomarafiga" target="_blank" class="hover:text-white transition">GitHub</a>
+        <a href="https://linkedin.com/in/brunomarafiga" target="_blank" class="hover:text-white transition">LinkedIn</a>
+        <a href="#hero" class="hover:text-white transition">Voltar ao Topo ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Project Details Modal -->
+  <div id="projectModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-200">
+    <div class="bg-slate-900 border border-slate-800 rounded-2xl max-w-2xl w-full p-6 sm:p-8 relative shadow-2xl transform scale-95 transition-transform duration-200" id="modalCard">
+      <button id="closeModal" class="absolute top-4 right-4 text-slate-400 hover:text-white p-2 rounded-lg hover:bg-slate-800 transition" aria-label="Fechar">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+      
+      <div id="modalContent">
+        <!-- Injected via script.js -->
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

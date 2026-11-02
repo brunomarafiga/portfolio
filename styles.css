@@ -1,0 +1,58 @@
+/* styles.css - Custom enhancements for Bruno Marafiga's Portfolio */
+
+:root {
+  --color-glow-blue: rgba(59, 130, 246, 0.15);
+  --color-glow-cyan: rgba(6, 182, 212, 0.15);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #020617;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+/* Card Glow Effect on Hover */
+.project-card {
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(59, 130, 246, 0.4);
+  box-shadow: 0 12px 30px -10px rgba(59, 130, 246, 0.15);
+}
+
+/* Filter Button Active State */
+.filter-btn.active {
+  background-color: #2563eb !important;
+  color: #ffffff !important;
+  border-color: #2563eb !important;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+}
+
+/* Modal Open Animations */
+#projectModal.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#projectModal.show #modalCard {
+  transform: scale(1);
+}
+
+/* Typography polish */
+code, pre {
+  font-family: 'JetBrains Mono', monospace;
+}
