@@ -84,7 +84,7 @@ O workflow em `.github/workflows/pages.yml` publica o conteúdo do repositório 
 ## Contato
 
 - [GitHub](https://github.com/brunomarafiga)
-- [LinkedIn](https://www.linkedin.com/in/bruno-marafiga/)
+- [LinkedIn](https://www.linkedin.com/in/bruno-marafiga)
 - [ORCID](https://orcid.org/0009-0002-0806-7771)
 - [E-mail](mailto:brunomarafiga@proton.me)
 
