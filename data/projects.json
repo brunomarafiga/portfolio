@@ -1,0 +1,101 @@
+[
+  {
+    "title": "Cognita Hub",
+    "category": "Aplicações",
+    "description": "Plataforma educacional gamificada para aprendizado e autoavaliação.",
+    "tags": [
+      "Vue",
+      "Nuxt 3",
+      "UX"
+    ],
+    "url": "https://github.com/brunomarafiga/cognahub"
+  },
+  {
+    "title": "Gerador de Certificados UFPR",
+    "category": "Aplicações",
+    "description": "Ferramenta web para gerar certificados em lote diretamente no navegador.",
+    "tags": [
+      "JavaScript",
+      "Offline",
+      "Automação"
+    ],
+    "url": "https://github.com/brunomarafiga/Criacao_certificados"
+  },
+  {
+    "title": "Gestor de Horas Formativas",
+    "category": "Aplicações",
+    "description": "Organização e contabilização de certificados acadêmicos com apoio de IA.",
+    "tags": [
+      "PyScript",
+      "Gemini",
+      "IA"
+    ],
+    "url": "https://github.com/brunomarafiga/horas_formativas_UFPR"
+  },
+  {
+    "title": "Redesign do SiBi UFPR",
+    "category": "Design",
+    "description": "Protótipo de alta fidelidade com foco em usabilidade e acessibilidade.",
+    "tags": [
+      "HTML",
+      "CSS",
+      "Acessibilidade"
+    ],
+    "url": "https://github.com/brunomarafiga/Design-da-informa-o"
+  },
+  {
+    "title": "Extração de relatórios MEC",
+    "category": "Dados e IA",
+    "description": "Pipeline de extração, OCR e análise de relatórios institucionais.",
+    "tags": [
+      "Python",
+      "OCR",
+      "PyMuPDF"
+    ],
+    "url": "https://github.com/brunomarafiga/CIAI"
+  },
+  {
+    "title": "Ensalamento SIEPE",
+    "category": "Dados e IA",
+    "description": "Algoritmo para alocação otimizada de trabalhos em salas e sessões.",
+    "tags": [
+      "Python",
+      "Pandas",
+      "Otimização"
+    ],
+    "url": "https://github.com/brunomarafiga/distribuicao_horarios_SIEPE"
+  },
+  {
+    "title": "Corpus textual para IA",
+    "category": "Pesquisa",
+    "description": "Pipeline de scraping, NLP e classificação temática de obras literárias.",
+    "tags": [
+      "NLP",
+      "Scraping",
+      "Datasets"
+    ],
+    "url": "https://github.com/brunomarafiga/extracao_poemas"
+  },
+  {
+    "title": "Pesquisa sobre carga cognitiva",
+    "category": "Pesquisa",
+    "description": "Revisão estruturada sobre ambientes virtuais de aprendizagem.",
+    "tags": [
+      "LaTeX",
+      "Revisão",
+      "UFPR"
+    ],
+    "url": "https://github.com/brunomarafiga/inteligencia-artificial"
+  },
+  {
+    "title": "Projeto de TCC",
+    "category": "Pesquisa",
+    "description": "Pesquisa sobre arquitetura da informação e uso do Moodle UFPR.",
+    "tags": [
+      "Pesquisa",
+      "Moodle",
+      "Informação"
+    ],
+    "url": "https://github.com/brunomarafiga/projeto-tcc-gestao-informacao"
+  }
+]
