@@ -1,162 +1,191 @@
-// script.js - Portfolio Engine for Bruno Marafiga
+﻿// script.js - Portfolio Engine for Bruno Marafiga
 
 // Fallback embedded projects data to ensure seamless operation even if opened via file:// protocol
 const EMBEDDED_PROJECTS = [
   {
+    "id": "pesquisa-moodle",
+    "title": "Arquitetura da InformaÃ§Ã£o & Moodle UFPR",
+    "subtitle": "Projeto de TCC em GestÃ£o da InformaÃ§Ã£o (UFPR)",
+    "category": "governanca",
+    "categoryLabel": "Pesquisa & TCC",
+    "description": "Projeto de TCC sobre arquitetura da informaÃ§Ã£o, organizaÃ§Ã£o de conteÃºdos e experiÃªncia de uso no Moodle da UFPR.",
+    "longDescription": "InvestigaÃ§Ã£o qualitativa sobre como discentes e docentes percebem a organizaÃ§Ã£o, navegaÃ§Ã£o e encontrabilidade de materiais didÃ¡ticos no Moodle UFPR. Articula conceitos de Arquitetura da InformaÃ§Ã£o, Teoria da Carga Cognitiva e Teoria Ator-Rede para propor um guia de diretrizes aplicadas aos ambientes virtuais de aprendizagem.",
+    "tags": ["Arquitetura da InformaÃ§Ã£o", "Carga Cognitiva", "Moodle UFPR", "TCC", "LaTeX"],
+    "github": "https://github.com/brunomarafiga/pesquisa-moodle-arquitetura-informacao",
+    "demo": null,
+    "featured": true,
+    "icon": "graduation-cap"
+  },
+  {
+    "id": "carga-cognitiva-avas",
+    "title": "Carga Cognitiva em Ambientes Virtuais",
+    "subtitle": "Artigo CientÃ­fico â€¢ Mestrado Profissional em CiÃªncia de Dados",
+    "category": "data-ai",
+    "categoryLabel": "Pesquisa & IA",
+    "description": "Pesquisa acadÃªmica sobre carga cognitiva, usabilidade e retenÃ§Ã£o de conhecimento em ambientes virtuais de aprendizagem.",
+    "longDescription": "RevisÃ£o sistemÃ¡tica e sÃ­ntese de evidÃªncias empÃ­ricas e biomÃ©tricas (eye-tracking, GSR e testes de desempenho) investigando como a sobrecarga cognitiva extrÃ­nseca afeta negativamente a retenÃ§Ã£o de conhecimento no ensino superior. Inclui pipeline com validaÃ§Ã£o de esquema JSON para extraÃ§Ã£o de evidÃªncias.",
+    "tags": ["Carga Mental", "AVAs", "CiÃªncia de Dados", "Rayyan", "LaTeX"],
+    "github": "https://github.com/brunomarafiga/carga-cognitiva-ambientes-virtuais",
+    "demo": null,
+    "featured": true,
+    "icon": "brain"
+  },
+  {
     "id": "horas-formativas",
     "title": "Gestor Inteligente de Horas Formativas",
-    "subtitle": "IA Multimodal Client-Side para Validação Curricular UFPR",
+    "subtitle": "IA Multimodal Client-Side para ValidaÃ§Ã£o Curricular UFPR",
     "category": "automacao",
-    "categoryLabel": "Automação & IA",
-    "description": "Aplicação web serverless que processa certificados em PDF usando PyScript (Python no navegador) e a API Google Gemini para extrair e contabilizar horas formativas conforme a Resolução da UFPR.",
-    "longDescription": "Desenvolvido para eliminar o cálculo manual de horas complementares dos alunos da UFPR. Os certificados em PDF são lidos via PyScript e analisados pelo modelo multimodal Gemini, enquadrando automaticamente as atividades nas categorias oficiais e calculando limites de integralização com 100% de privacidade local (LGPD).",
+    "categoryLabel": "AutomaÃ§Ã£o & IA",
+    "description": "Ferramenta web gratuita para alunos da UFPR organizarem e contabilizarem seus certificados de Atividades Formativas usando InteligÃªncia Artificial (Google Gemini).",
+    "longDescription": "Desenvolvido para eliminar o cÃ¡lculo manual de horas complementares dos alunos da UFPR. Os certificados em PDF sÃ£o lidos via PyScript (Python no navegador via WebAssembly) e analisados pelo modelo multimodal Gemini, enquadrando automaticamente as atividades nas categorias oficiais e calculando limites de integralizaÃ§Ã£o com 100% de privacidade local (LGPD).",
     "tags": ["PyScript", "Google Gemini", "WebAssembly", "Python", "UFPR"],
-    "github": "https://github.com/brunomarafiga/horas_formativas_UFPR",
-    "demo": "https://brunomarafiga.github.io/horas_formativas_UFPR/",
+    "github": "https://github.com/brunomarafiga/gestor-horas-formativas-ufpr",
+    "demo": "https://brunomarafiga.github.io/gestor-horas-formativas-ufpr/",
     "featured": true,
     "icon": "sparkles"
   },
   {
-    "id": "minera-dados-bwo",
-    "title": "Mineração Educacional & Otimização BWO",
-    "subtitle": "Seleção Heurística de Atributos com Black Widow Optimization",
-    "category": "data-ai",
-    "categoryLabel": "Ciência de Dados & IA",
-    "description": "Implementação do algoritmo bioinspirado Black Widow Optimization (BWO) para seleção de atributos preditivos de desempenho escolar em bases da UCI (Matemática e Português).",
-    "longDescription": "Experimento acadêmico de Educational Data Mining (EDM) no curso de Gestão da Informação da UFPR. A meta-heurística BWO otimiza a acurácia de um classificador K-NN ao eliminar dimensões ruidosas, reduzindo a taxa de erro de 26,8% para 15,9% na base de Matemática em formato WEKA ARFF.",
-    "tags": ["Python", "BWO Metaheuristic", "Scikit-Learn", "WEKA ARFF", "Machine Learning"],
-    "github": "https://github.com/brunomarafiga/Minera-o-de-dados-2025-2",
-    "demo": null,
+    "id": "certificados-pva",
+    "title": "Gerador de Certificados UFPR (PVA)",
+    "subtitle": "EmissÃ£o RÃ¡pida em Lote no Navegador sem Servidor",
+    "category": "automacao",
+    "categoryLabel": "AutomaÃ§Ã£o & IA",
+    "description": "AplicaÃ§Ã£o web para gerar certificados em lote a partir de planilhas, diretamente no navegador e sem necessidade de instalaÃ§Ã£o.",
+    "longDescription": "ReformulaÃ§Ã£o completa de script Python clÃ¡ssico para ambiente web moderno. Renderiza certificados oficiais em alta resoluÃ§Ã£o utilizando HTML5 Canvas e SheetJS, processando dezenas de certificados em lote em segundos com total privacidade.",
+    "tags": ["JavaScript", "HTML5 Canvas", "SheetJS", "UFPR PVA", "Privacidade"],
+    "github": "https://github.com/brunomarafiga/gerador-certificados-ufpr",
+    "demo": "https://brunomarafiga.github.io/gerador-certificados-ufpr/",
     "featured": true,
-    "icon": "cpu"
-  },
-  {
-    "id": "extracao-poemas-obia",
-    "title": "Pipeline de NLP & Scraping (OBIA/UFPR)",
-    "subtitle": "Curadoria de Corpus Textual para Benchmarking de Embeddings",
-    "category": "data-ai",
-    "categoryLabel": "Ciência de Dados & IA",
-    "description": "Pipeline automatizado de coleta, limpeza e validação de textos literários clássicos para avaliação de modelos de embeddings de inteligência artificial.",
-    "longDescription": "Desenvolvido durante Iniciação Científica (PIBIC) no Observatório Brasileiro de Inteligência Artificial (OBIA/UFPR). O pipeline faz web scraping do Project Gutenberg, limpa metadados e estrutura um corpus temático validado estatisticamente para testes de representação semântica.",
-    "tags": ["Python", "NLP", "Web Scraping", "OBIA / UFPR", "Embeddings"],
-    "github": "https://github.com/brunomarafiga/extracao_poemas",
-    "demo": null,
-    "featured": true,
-    "icon": "book-open"
-  },
-  {
-    "id": "ciai-mec",
-    "title": "CIAI — Extração de Relatórios MEC & Análise Bardin",
-    "subtitle": "Mineração de Avaliações In Loco e Análise de Conteúdo",
-    "category": "data-ai",
-    "categoryLabel": "Ciência de Dados & IA",
-    "description": "Extração estruturada de pareceres, notas e conceitos de relatórios e-MEC em PDF com análise de conteúdo textual baseada no método Laurence Bardin.",
-    "longDescription": "Solução institucional concebida para a Coordenadoria de Indicadores e Avaliação Institucional (CIAI/UFPR). Converte dezenas de relatórios e-MEC não estruturados em bases analíticas com classificação semântica de fragilidades e potencialidades dos cursos de graduação.",
-    "tags": ["Python", "Regex", "Bardin NLP", "PDFPlumber", "Governança MEC"],
-    "github": "https://github.com/brunomarafiga/CIAI",
-    "demo": null,
-    "featured": true,
-    "icon": "file-search"
+    "icon": "award"
   },
   {
     "id": "ensalamento-siepe",
     "title": "Ensalamento Automatizado SIEPE UFPR",
-    "subtitle": "Algoritmo de Otimização Combinatória para Distribuição de Salas",
+    "subtitle": "OtimizaÃ§Ã£o CombinatÃ³ria de HorÃ¡rios e Salas",
     "category": "automacao",
-    "categoryLabel": "Automação & IA",
-    "description": "Sistema em Python para alocação inteligente de horários e salas de apresentação da Semana Integrada de Ensino, Pesquisa e Extensão da UFPR sem choques.",
-    "longDescription": "Processa a base de dados de trabalhos aprovados no evento anual da UFPR e aplica regras heurísticas de negócio: agrupamento por afinidade temática e prevenção rigorosa de choques de horário para orientadores e avaliadores.",
-    "tags": ["Python", "Otimização Combinatória", "Pandas", "Logística Universitária"],
-    "github": "https://github.com/brunomarafiga/distribuicao_horarios_SIEPE",
+    "categoryLabel": "AutomaÃ§Ã£o & IA",
+    "description": "Algoritmo em Python para distribuir trabalhos do SIEPE em salas e sessÃµes, respeitando capacidade, Ã¡reas temÃ¡ticas e conflitos de horÃ¡rio.",
+    "longDescription": "Processa a base de dados de trabalhos aprovados no evento anual da UFPR e aplica regras heurÃ­sticas de negÃ³cio: agrupamento por afinidade temÃ¡tica e prevenÃ§Ã£o rigorosa de choques de horÃ¡rio para orientadores e avaliadores.",
+    "tags": ["Python", "OtimizaÃ§Ã£o CombinatÃ³ria", "Pandas", "LogÃ­stica UniversitÃ¡ria"],
+    "github": "https://github.com/brunomarafiga/ensalamento-siepe",
     "demo": null,
     "featured": false,
     "icon": "calendar"
   },
   {
-    "id": "certificados-pva",
-    "title": "Gerador de Certificados PVA UFPR",
-    "subtitle": "Emissão Rápida em Lote no Navegador sem Servidor",
-    "category": "automacao",
-    "categoryLabel": "Automação & IA",
-    "description": "Ferramenta web 100% offline para emissão de certificados acadêmicos do Programa de Voluntariado Acadêmico a partir de planilhas Excel.",
-    "longDescription": "Reformulação completa de script Python clássico para ambiente web moderno. Renderiza certificados oficiais em alta resolução utilizando HTML5 Canvas e SheetJS, processando dezenas de certificados em segundos com total privacidade.",
-    "tags": ["JavaScript", "HTML5 Canvas", "SheetJS", "UFPR PVA", "Privacidade"],
-    "github": "https://github.com/brunomarafiga/Criacao_certificados",
-    "demo": "https://brunomarafiga.github.io/Criacao_certificados/",
-    "featured": false,
-    "icon": "award"
-  },
-  {
-    "id": "governanca-documental",
-    "title": "Governança Documental & Conformidade MEC",
-    "subtitle": "Manual de Requisitos e Formulário de Auditoria para Pró-reitorias",
+    "id": "gestao-documental",
+    "title": "GestÃ£o Documental & Conformidade MEC",
+    "subtitle": "Manual de Requisitos e FormulÃ¡rio para PrÃ³-reitorias",
     "category": "governanca",
-    "categoryLabel": "Governança & LGPD",
-    "description": "Arcabouço normativo de governança documental e checklists de conformidade para auditoria de acervos institucionais da UFPR frente ao SINAES/MEC e LGPD.",
-    "longDescription": "Estruturação taxonômica e procedural desenvolvida para orientar Pró-reitorias e Superintendências da UFPR na coleta e organização de atos administrativos, portarias e relatórios de gestão, com diretrizes de minimização e conformidade com a LGPD.",
-    "tags": ["Governança da Informação", "LGPD", "SINAES / MEC", "Arquitetura Documental"],
-    "github": "https://github.com/brunomarafiga/documenta-o-proreitoria-e-superintendencia",
+    "categoryLabel": "GovernanÃ§a & LGPD",
+    "description": "Modelos e orientaÃ§Ãµes para coleta, organizaÃ§Ã£o, padronizaÃ§Ã£o e gestÃ£o documental da PrÃ³-Reitoria e SuperintendÃªncia.",
+    "longDescription": "EstruturaÃ§Ã£o taxonÃ´mica e procedural desenvolvida para orientar PrÃ³-reitorias e SuperintendÃªncias da UFPR na coleta e organizaÃ§Ã£o de atos administrativos, portarias e relatÃ³rios de gestÃ£o, com diretrizes de minimizaÃ§Ã£o e conformidade com a LGPD e SINAES/MEC.",
+    "tags": ["GovernanÃ§a da InformaÃ§Ã£o", "LGPD", "SINAES / MEC", "Arquitetura Documental"],
+    "github": "https://github.com/brunomarafiga/gestao-documental-proreitoria-ufpr",
     "demo": null,
     "featured": false,
     "icon": "shield-check"
   },
   {
-    "id": "gestao-conhecimento",
-    "title": "Plataforma de Gestão do Conhecimento",
-    "subtitle": "Hub de Curadoria Epistêmica e Fontes Especializadas",
-    "category": "governanca",
-    "categoryLabel": "Governança & LGPD",
-    "description": "Repositório interativo com curadoria de livros, podcasts, canais audiovisuais e portais científicos para estudantes de Gestão da Informação.",
-    "longDescription": "Aplicação web desacoplada baseada em Alpine.js e Materialize CSS que implementa na prática princípios de recuperação de informação e taxonomia para compartilhamento de conhecimento em Ciência da Informação.",
-    "tags": ["Alpine.js", "Materialize CSS", "Taxonomias", "Gestão do Conhecimento", "GI UFPR"],
-    "github": "https://github.com/brunomarafiga/gestao-conhecimento",
+    "id": "extracao-relatorios-emec",
+    "title": "ExtraÃ§Ã£o de RelatÃ³rios MEC & AnÃ¡lise Bardin",
+    "subtitle": "MineraÃ§Ã£o de AvaliaÃ§Ãµes In Loco e AnÃ¡lise de ConteÃºdo",
+    "category": "data-ai",
+    "categoryLabel": "CiÃªncia de Dados & IA",
+    "description": "RepositÃ³rios de scripts utilizados no CIAI da UFPR para extrair dados dos relatÃ³rios do MEC.",
+    "longDescription": "SoluÃ§Ã£o institucional concebida para a Coordenadoria de Indicadores e AvaliaÃ§Ã£o Institucional (CIAI/UFPR). Converte dezenas de relatÃ³rios e-MEC nÃ£o estruturados em bases analÃ­ticas com classificaÃ§Ã£o semÃ¢ntica de fragilidades e potencialidades dos cursos de graduaÃ§Ã£o segundo a metodologia Bardin.",
+    "tags": ["Python", "Regex", "Bardin NLP", "PDFPlumber", "GovernanÃ§a MEC"],
+    "github": "https://github.com/brunomarafiga/extracao-relatorios-emec",
     "demo": null,
     "featured": false,
-    "icon": "share-2"
+    "icon": "file-search"
+  },
+  {
+    "id": "corpus-literario-ia",
+    "title": "Corpus Textual & Scraping (OBIA/UFPR)",
+    "subtitle": "Curadoria de Corpus Textual para Benchmarking de Embeddings",
+    "category": "data-ai",
+    "categoryLabel": "CiÃªncia de Dados & IA",
+    "description": "Pipeline de web scraping e NLP para construÃ§Ã£o de corpus textual classificado â€” IniciaÃ§Ã£o CientÃ­fica OBIA/UFPR.",
+    "longDescription": "Desenvolvido durante IniciaÃ§Ã£o CientÃ­fica (PIBIC) no ObservatÃ³rio Brasileiro de InteligÃªncia Artificial (OBIA/UFPR). O pipeline faz web scraping do Project Gutenberg, limpa metadados e estrutura um corpus temÃ¡tico validado estatisticamente para testes de representaÃ§Ã£o semÃ¢ntica.",
+    "tags": ["Python", "NLP", "Web Scraping", "OBIA / UFPR", "Embeddings"],
+    "github": "https://github.com/brunomarafiga/corpus-literario-ia",
+    "demo": null,
+    "featured": false,
+    "icon": "book-open"
+  },
+  {
+    "id": "minera-dados-bwo",
+    "title": "MineraÃ§Ã£o Educacional & OtimizaÃ§Ã£o BWO",
+    "subtitle": "SeleÃ§Ã£o HeurÃ­stica de Atributos com Black Widow Optimization",
+    "category": "data-ai",
+    "categoryLabel": "CiÃªncia de Dados & IA",
+    "description": "ImplementaÃ§Ã£o do algoritmo bioinspirado Black Widow Optimization (BWO) para seleÃ§Ã£o de atributos preditivos de desempenho escolar em bases da UCI.",
+    "longDescription": "Experimento acadÃªmico de Educational Data Mining (EDM) no curso de GestÃ£o da InformaÃ§Ã£o da UFPR. A meta-heurÃ­stica BWO otimiza a acurÃ¡cia de um classificador K-NN ao eliminar dimensÃµes ruidosas, reduzindo a taxa de erro de 26,8% para 15,9% na base de MatemÃ¡tica em formato WEKA ARFF.",
+    "tags": ["Python", "BWO Metaheuristic", "Scikit-Learn", "WEKA ARFF", "Machine Learning"],
+    "github": "https://github.com/brunomarafiga/otimizacao-bwo-mineracao-dados",
+    "demo": null,
+    "featured": false,
+    "icon": "cpu"
   },
   {
     "id": "cognahub",
-    "title": "Cognita Hub — Plataforma Gamificada",
+    "title": "Cognita Hub â€” Plataforma Gamificada",
     "subtitle": "Ambiente de Aprendizagem Reativo com Nuxt 3 e Vue 3",
     "category": "web-ui",
     "categoryLabel": "Web & UI/UX",
-    "description": "Plataforma interativa de estudos com questionários gamificados e biblioteca curada, projetada com arquitetura modular em Nuxt 3.",
-    "longDescription": "Desenvolvido na disciplina de Gestão de Projetos da UFPR. Aplica boas práticas de desenvolvimento ágil de software e UX/UI reativa com Vue 3 Composition API, focando na autoavaliação contínua de discentes.",
-    "tags": ["Nuxt 3", "Vue.js 3", "Tailwind CSS", "Gamificação", "Gestão de Projetos"],
-    "github": "https://github.com/brunomarafiga/cognahub",
+    "description": "Plataforma web interativa de aprendizado com quizzes gamificados â€” Disciplina de GestÃ£o de Projetos/UFPR.",
+    "longDescription": "Desenvolvido na disciplina de GestÃ£o de Projetos da UFPR. Aplica boas prÃ¡ticas de desenvolvimento Ã¡gil de software e UX/UI reativa com Vue 3 Composition API, focando na autoavaliaÃ§Ã£o contÃ­nua de discentes.",
+    "tags": ["Nuxt 3", "Vue.js 3", "Tailwind CSS", "GamificaÃ§Ã£o", "GestÃ£o de Projetos"],
+    "github": "https://github.com/brunomarafiga/cognita-hub",
     "demo": null,
     "featured": false,
     "icon": "zap"
   },
   {
     "id": "redesign-sibi",
-    "title": "Redesign do SiBi UFPR — Alta Fidelidade",
+    "title": "Redesign do SiBi UFPR â€” Alta Fidelidade",
     "subtitle": "Estudo de Caso de Usabilidade e Acessibilidade Web (WCAG)",
     "category": "web-ui",
     "categoryLabel": "Web & UI/UX",
-    "description": "Reformulação completa da arquitetura da informação e interface do Sistema de Bibliotecas da UFPR com testes formais de acessibilidade.",
-    "longDescription": "Projeto prático de Design da Informação focado em eliminar a sobrecarga cognitiva do portal de bibliotecas da UFPR. Implementou hierarquia tipográfica clara, contraste acessível WCAG 2.1 AA e demo no GitHub Pages.",
-    "tags": ["Design da Informação", "UI/UX", "Acessibilidade WCAG", "GitHub Pages", "HTML/CSS"],
-    "github": "https://github.com/brunomarafiga/Design-da-informacao",
-    "demo": "https://brunomarafiga.github.io/Design-da-informa-o/",
+    "description": "Redesign de alta fidelidade do site do SiBi UFPR â€” Disciplina de Design da InformaÃ§Ã£o/UFPR.",
+    "longDescription": "Projeto prÃ¡tico de Design da InformaÃ§Ã£o focado em eliminar a sobrecarga cognitiva do portal de bibliotecas da UFPR. Implementou hierarquia tipogrÃ¡fica clara, contraste acessÃ­vel WCAG 2.1 AA e demo no GitHub Pages.",
+    "tags": ["Design da InformaÃ§Ã£o", "UI/UX", "Acessibilidade WCAG", "GitHub Pages", "HTML/CSS"],
+    "github": "https://github.com/brunomarafiga/redesign-sibi-ufpr",
+    "demo": "https://brunomarafiga.github.io/redesign-sibi-ufpr/",
     "featured": false,
     "icon": "layout"
   },
   {
+    "id": "gestao-conhecimento",
+    "title": "Plataforma de GestÃ£o do Conhecimento",
+    "subtitle": "Hub de Curadoria EpistÃªmica e Fontes Especializadas",
+    "category": "governanca",
+    "categoryLabel": "GovernanÃ§a & LGPD",
+    "description": "RepositÃ³rio interativo com curadoria de livros, podcasts, canais audiovisuais e portais cientÃ­ficos para estudantes de GestÃ£o da InformaÃ§Ã£o.",
+    "longDescription": "AplicaÃ§Ã£o web desacoplada baseada em Alpine.js e Materialize CSS que implementa na prÃ¡tica princÃ­pios de recuperaÃ§Ã£o de informaÃ§Ã£o e taxonomia para compartilhamento de conhecimento em CiÃªncia da InformaÃ§Ã£o.",
+    "tags": ["Alpine.js", "Materialize CSS", "Taxonomias", "GestÃ£o do Conhecimento", "GI UFPR"],
+    "github": "https://github.com/brunomarafiga/gestao-conhecimento",
+    "demo": null,
+    "featured": false,
+    "icon": "share-2"
+  },
+  {
     "id": "simulado-sociais",
     "title": "Exame Simulado de Humanidades & Sociais",
-    "subtitle": "Plataforma de Avaliação Formativa com 100 Questões Classificadas",
+    "subtitle": "Plataforma de AvaliaÃ§Ã£o Formativa com 100 QuestÃµes Classificadas",
     "category": "web-ui",
     "categoryLabel": "Web & UI/UX",
-    "description": "Simulador interativo de provas acadêmicas com cronômetro regressivo, 7 subáreas das ciências humanas e métricas detalhadas de desempenho.",
-    "longDescription": "Aplicação web desenvolvida em Vanilla JavaScript contendo 100 questões densas de Antropologia, Sociologia, Ciência Política, Economia e Epistemologia, com gabarito justificado e estatísticas instantâneas.",
-    "tags": ["Vanilla JavaScript", "CSS3 Moderno", "Avaliação Formativa", "Ciências Sociais"],
+    "description": "Simulador interativo de provas acadÃªmicas com cronÃ´metro regressivo, 7 subÃ¡reas das ciÃªncias humanas e mÃ©tricas detalhadas de desempenho.",
+    "longDescription": "AplicaÃ§Ã£o web desenvolvida em Vanilla JavaScript contendo 100 questÃµes densas de Antropologia, Sociologia, CiÃªncia PolÃ­tica, Economia e Epistemologia, com gabarito justificado e estatÃ­sticas instantÃ¢neas.",
+    "tags": ["Vanilla JavaScript", "CSS3 Moderno", "AvaliaÃ§Ã£o Formativa", "CiÃªncias Sociais"],
     "github": "https://github.com/brunomarafiga/teste-sociais",
     "demo": null,
     "featured": false,
     "icon": "check-circle"
   }
-];
+]
+;
 
 let allProjects = [];
 let currentFilter = 'all';
@@ -234,7 +263,7 @@ function renderProjects() {
     grid.innerHTML = `
       <div class="col-span-full py-16 text-center">
         <i data-lucide="folder-search" class="w-12 h-12 text-slate-600 mx-auto mb-3"></i>
-        <p class="text-slate-400 text-sm font-medium">Nenhum projeto encontrado para os critérios pesquisados.</p>
+        <p class="text-slate-400 text-sm font-medium">Nenhum projeto encontrado para os critÃ©rios pesquisados.</p>
         <button onclick="resetFilters()" class="mt-4 px-4 py-2 text-xs font-semibold rounded-lg bg-blue-600 hover:bg-blue-500 text-white transition">Limpar Filtros</button>
       </div>
     `;
@@ -272,7 +301,7 @@ function renderProjects() {
             </button>
             <div class="flex items-center gap-2">
               ${p.github ? `<a href="${p.github}" target="_blank" rel="noopener noreferrer" class="p-1.5 text-slate-400 hover:text-white transition" title="Ver no GitHub"><i data-lucide="github" class="w-4 h-4"></i></a>` : ''}
-              ${p.demo ? `<a href="${p.demo}" target="_blank" rel="noopener noreferrer" class="p-1.5 text-slate-400 hover:text-cyan-400 transition" title="Abrir Demonstração"><i data-lucide="external-link" class="w-4 h-4"></i></a>` : ''}
+              ${p.demo ? `<a href="${p.demo}" target="_blank" rel="noopener noreferrer" class="p-1.5 text-slate-400 hover:text-cyan-400 transition" title="Abrir DemonstraÃ§Ã£o"><i data-lucide="external-link" class="w-4 h-4"></i></a>` : ''}
             </div>
           </div>
         </div>
@@ -294,7 +323,7 @@ function openModal(projectId) {
   modalContent.innerHTML = `
     <div class="flex items-center gap-2 text-xs font-mono text-blue-400 mb-2">
       <span>${project.categoryLabel}</span>
-      ${project.demo ? '<span>•</span><span class="text-emerald-400 font-semibold">Demo Disponível</span>' : ''}
+      ${project.demo ? '<span>â€¢</span><span class="text-emerald-400 font-semibold">Demo DisponÃ­vel</span>' : ''}
     </div>
     
     <h3 class="text-xl sm:text-2xl font-bold text-white mb-1">${project.title}</h3>
@@ -315,14 +344,14 @@ function openModal(projectId) {
       ${project.demo ? `
         <a href="${project.demo}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-xs transition shadow-md shadow-emerald-600/20">
           <i data-lucide="external-link" class="w-4 h-4"></i>
-          <span>Acessar Demonstração Web</span>
+          <span>Acessar DemonstraÃ§Ã£o Web</span>
         </a>
       ` : ''}
       
       ${project.github ? `
         <a href="${project.github}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 font-semibold text-xs transition">
           <i data-lucide="github" class="w-4 h-4"></i>
-          <span>Repositório no GitHub</span>
+          <span>RepositÃ³rio no GitHub</span>
         </a>
       ` : ''}
     </div>
@@ -347,3 +376,4 @@ function resetFilters() {
   });
   renderProjects();
 }
+
