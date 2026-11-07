@@ -1,7 +1,21 @@
-﻿// script.js - Portfolio Engine for Bruno Marafiga
+// script.js - Portfolio Engine for Bruno Marafiga
 
 // Fallback embedded projects data to ensure seamless operation even if opened via file:// protocol
 const EMBEDDED_PROJECTS = [
+  {
+    "id": "webcrawler-tool-context",
+    "title": "Pipeline de Extração & Validação de Ferramentas IA",
+    "subtitle": "Web Crawler & Enriquecimento Automatizado com Gemini API",
+    "category": "data-ai",
+    "categoryLabel": "Engenharia de Dados & IA",
+    "description": "Pipeline automatizado de web crawling, extração de evidências e geração assistida por IA (Gemini API) para catalogação na base HarmonIA/LumIA.",
+    "longDescription": "Pipeline de engenharia de dados em Python 3.12 (gerenciado via Poetry) concebido para processar centenas de ferramentas tecnológicas. Realiza coleta automatizada em páginas oficiais e repositórios respeitando robots.txt, armazena evidências auditáveis em SQLite e sintetiza resumos técnicos validados pelo modelo Gemini conforme o Protocolo de Curadoria HarmonIA/LumIA.",
+    "tags": ["Python 3.12", "Poetry", "Gemini API", "Web Scraping", "SQLite", "Data Quality"],
+    "github": "https://github.com/brunomarafiga/webcrawler-tool-context",
+    "demo": null,
+    "featured": true,
+    "icon": "network"
+  },
   {
     "id": "pesquisa-moodle",
     "title": "Arquitetura da InformaÃ§Ã£o & Moodle UFPR",
